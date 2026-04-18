@@ -42,3 +42,24 @@ Se diseñó una tabla optimizada para la gestión de metadatos científicos:
 ### Contenido Relacionado en el Repositorio
 * `NASA_Facilities_rows.csv`: Datos fuente originales obtenidos del portal Open Data de la NASA.
 * `NASA_Instalaciones.sql`: Script que contiene la estructura DDL de la tabla y las consultas de verificación.
+
+---
+
+## Base de Datos: Yelp Open Dataset (Negocios comerciales y reseñas)
+
+**Fuente:** [https://business.yelp.com/data/resources/open-dataset/](https://business.yelp.com/data/resources/open-dataset/)
+**Autor:** Jafet Jose Sebastian
+**Carrera:** Ingeniería en Sistemas Computacionales (Instituto Tecnológico de Oaxaca)
+
+### Descripción del Proyecto
+Este apartado contiene una base de datos relacional construida a partir de un subconjunto de datos reales del Yelp Open Dataset. Yelp hace pública esta información con fines educativos para que estudiantes e investigadores trabajen con datos reales en proyectos de análisis. 
+
+El objetivo de esta integración fue la extracción y transformación de un archivo masivo (NDJSON) a un formato manejable (CSV), para posteriormente importar una muestra representativa de establecimientos, facilitando así el análisis de negocios, ubicación y reputación digital mediante consultas SQL.
+
+### Estructura de las Tablas
+Para optimizar el manejo de la información, se implementó un diseño de tabla única:
+
+1. **`business`**: Almacena más de 2,100 registros funcionales con los datos principales de los locales (ID del negocio, nombre, dirección, ciudad, estado, código postal, coordenadas geográficas, calificación de estrellas y cantidad de reseñas).
+
+### Contenido Relacionado en el Repositorio
+* `datos_yelp.sql`: Script de exportación autocontenido generado en MySQL Workbench. Incluye la sentencia de creación de la tabla y los comandos `INSERT` para la carga inmediata de los datos en cualquier gestor local.
