@@ -25,12 +25,6 @@ Se diseñaron dos tablas principales para organizar la información:
 1. **`datos_entidad`**: Información agregada por estado (32 registros).
 2. **`datos_por_distrito`**: Información detallada por distrito electoral/geográfico.
 
-### Diccionario de Datos Clave
-Dado que el dataset original contiene más de 200 variables, se destacan las siguientes categorías:
-* **Demografía:** `POBTOT` (Población Total), `POBFEM`, `POBMAS`, rangos de edad (`P_0A2`, `P_15YMAS`, etc.).
-* **Vivienda:** `VIVTOT` (Total de viviendas), `VPH_INTER` (Viviendas con Internet), `VPH_PC` (Viviendas con computadora).
-* **Educación:** `GRAPROES` (Grado promedio de escolaridad).
-
 ### Contenido Relacionado en el Repositorio
 * `INE_DISTRITO_2020.csv`: Datos fuente procesados para su importación.
 * `importacion_inegi.sql`: Script con la estructura de las tablas y comandos `LOAD DATA` para la carga masiva.
