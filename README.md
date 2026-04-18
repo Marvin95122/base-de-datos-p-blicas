@@ -63,3 +63,29 @@ Para optimizar el manejo de la información, se implementó un diseño de tabla 
 
 ### Contenido Relacionado en el Repositorio
 * `datos_yelp.sql`: Script de exportación autocontenido generado en MySQL Workbench. Incluye la sentencia de creación de la tabla y los comandos `INSERT` para la carga inmediata de los datos en cualquier gestor local.
+
+
+## Base de Datos: World Bank Open Data (PIB actual en US$)
+
+**Fuente:** [https://data.worldbank.org/](https://data.worldbank.org/)
+**Autor:** Jhoan Marvin Cruz Sanchez
+**Carrera:** Ingeniería en Sistemas Computacionales (Instituto Tecnológico de Oaxaca)
+
+### Descripción del Proyecto
+Este apartado contiene una base de datos relacional construida a partir de datos públicos de **World Bank Open Data**, utilizando el indicador **GDP (current US$)** con clave **NY.GDP.MKTP.CD**. 
+
+El Banco Mundial publica esta información como parte de su iniciativa de datos abiertos, con el propósito de fomentar la transparencia, el análisis económico, la investigación académica y la reutilización de información estadística por parte de estudiantes, investigadores, instituciones y desarrolladores.
+
+En este proyecto, los datos fueron descargados en formato CSV, adaptados para su importación y posteriormente integrados en MySQL Workbench mediante una tabla única, con el fin de facilitar consultas relacionadas con el comportamiento del Producto Interno Bruto de distintos países a lo largo del tiempo.
+
+### Estructura de la Tabla
+Para simplificar la administración y consulta de la información, se diseñó una tabla principal:
+
+1. **`wb_gdp_current_usd`**: Almacena los registros del indicador económico por país y año, incluyendo nombre del país, código, nombre del indicador, clave del indicador, año y valor del PIB en dólares corrientes.
+
+### Contenido Relacionado en el Repositorio
+* `API_NY.GDP.MKTP.CD_DS2_EN_csv_v2_23606_LIST.csv`: Archivo fuente en formato CSV utilizado para la importación de datos.
+* `API_NY.GDP.MKTP.CD_DS2_EN_csv_v2_23606_LIST.sql`: Script de exportación que contiene la estructura de la tabla y los datos cargados en MySQL.
+
+### Observación
+La base de datos fue creada con fines académicos, como ejemplo práctico de descarga, transformación, importación y consulta de datos abiertos provenientes de una fuente internacional oficial.
