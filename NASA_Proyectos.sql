@@ -1,1 +1,0 @@
-SELECT * FROM instalaciones_nasa;
