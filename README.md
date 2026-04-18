@@ -11,3 +11,26 @@ Este repositorio contiene el diseño, estructuración e importación de una base
 ## Contenido del Repositorio
 * `si_investigacion_2026_enero.csv`: Archivo original.
 * `agroindustrial.sql`: Script de exportación.
+
+## Base de Datos: Censo de Población y Vivienda (INEGI)
+
+**Fuente:** [https://www.inegi.org.mx/](https://www.inegi.org.mx/)
+
+### Descripción del Proyecto
+Este apartado integra los datos estadísticos del Censo 2020 a nivel Entidad y Distrito. La base de datos permite analizar variables demográficas, sociales y de vivienda, facilitando la correlación entre la distribución poblacional y otros sectores económicos.
+
+### Estructura de las Tablas
+Se diseñaron dos tablas principales para organizar la información:
+
+1. **`datos_entidad`**: Información agregada por estado (32 registros).
+2. **`datos_por_distrito`**: Información detallada por distrito electoral/geográfico.
+
+### Diccionario de Datos Clave
+Dado que el dataset original contiene más de 200 variables, se destacan las siguientes categorías:
+* **Demografía:** `POBTOT` (Población Total), `POBFEM`, `POBMAS`, rangos de edad (`P_0A2`, `P_15YMAS`, etc.).
+* **Vivienda:** `VIVTOT` (Total de viviendas), `VPH_INTER` (Viviendas con Internet), `VPH_PC` (Viviendas con computadora).
+* **Educación:** `GRAPROES` (Grado promedio de escolaridad).
+
+### Contenido Relacionado en el Repositorio
+* `INE_DISTRITO_2020.csv`: Datos fuente procesados para su importación.
+* `importacion_inegi.sql`: Script con la estructura de las tablas y comandos `LOAD DATA` para la carga masiva.
